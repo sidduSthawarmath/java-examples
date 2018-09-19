@@ -6,16 +6,11 @@ package com.test.exceptions;
  * a single catch block using pipe (|) operator. By using pipe operator
  */
 public class PipeOperator {
-
 	public static void main(String[] args) {
-
 		try {
-
-			int i=100/0;
-			
+			int i = 100 / 0;
 		} catch (NullPointerException | ArithmeticException e) {
 			e.printStackTrace();
 		}
-
 	}
 }
