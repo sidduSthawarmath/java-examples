@@ -9,7 +9,7 @@ public class PipeOperator {
 	public static void main(String[] args) {
 		try {
 			int i = 100 / 0;
-		} catch (NullPointerException | ArithmeticException e) {
+		} catch (NullPointerException | ArithmeticException e) { // This is multiple catch using | 
 			e.printStackTrace();
 		}
 	}
