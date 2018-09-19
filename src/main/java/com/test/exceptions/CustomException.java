@@ -14,7 +14,7 @@ public class CustomException {
 	}
 }
 
-// This custom exception
+// This custom checked exception
 class BalanceException extends Exception {
 	public BalanceException(String msg) {
 		super(msg);
