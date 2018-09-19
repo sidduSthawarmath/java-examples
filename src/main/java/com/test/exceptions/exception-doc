@@ -1,0 +1,12 @@
+
+
+1.If super class method is not throwing any exceptions, then it can be overrided
+  with any unchecked type of exceptions, but can not be overrided with checked type of exceptions.
+  
+2.If a super class method is throwing unchecked exception, then it can be overrided 
+  in the sub class with same exception or any other unchecked exceptions but can not be overrided 
+  with checked exceptions.
+  
+3.If super class method is throwing checked type of exception, then it can be overrided 
+  with same exception or with it’s sub class exceptions i.e you can decrease the scope of the exception, 
+  but can not be overrided with it’s super class exceptions i.e you can not increase the scope of the exception.
