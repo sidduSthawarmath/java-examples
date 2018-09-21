@@ -10,3 +10,59 @@ Process:
 		3.Context switching from one process to another is more expensive
 		
 Thread:
+     Thread is smallest executable unit of process. Thread has it's own path of execution in a process.
+     For example we you start MS word the Operating System will create create the process for the MS word 
+     and starts the primary thread in the process. A process can have multiple threads.
+    	 1.Threads of the same process share the memory address of that process. i.e threads are stored inside the memory of a process.
+     	 2.As the threads are stored in the same memory space, communication between threads (Inter Thread Communication) is fast. Context switching from one thread to another thread is also less expensive.
+     
+  
+ Multitasking:
+ 	Multitasking is an operation in which multiple tasks are performed simultaneously. Multitasking is used to utilize CPU’s idle time. Multitasking can be of two types. 
+ 	One is process-based and another one is thread-based.
+ 	
+	1)Process-based multitasking Or Multiprocessing :
+   		In process-based multitasking or multiprocessing, Multiple processes are executed simultaneously. 
+   		You are all familiar with process-based multitasking. Because of this feature only, your computer runs 
+   		two or more programs simultaneously. For example, You can play a video file and print a text file simultaneously in your computer.
+   
+	2)Thread-based Multitasking  Or Multithreading:
+		In thread-based multitasking or multithreading, multiple threads in a process are executed simultaneously. 
+		For example, MS word can print a document using background thread, at the same another thread can accept 
+		the user input so that user can create a new document.
+		
+Creating thread in Java:
+------------------------
+     We can create thread by extending Thread class(java.lang.Thread) or by implementing Runnable interface(java.lang.Runnable)
+	
+	 1) By Extending Thread class
+	 
+		public class SampleThread extends Thread {
+			@Override
+			public void run() {
+				System.out.println("It in run method");
+			}
+			public static void main(String[] args) {
+				SampleThread sampleThread = new SampleThread();
+				Thread thread = new Thread(sampleThread, "SampleThread");
+				thread.start();
+			}
+		}
+			
+
+   2) By Implementing java.lang.Runnable Interface.
+		
+		public class ThreadExample implements Runnable
+		{
+			@Override
+			public void run() {
+				System.out.println("In Run method");
+			}
+			public static void main(String[] args) {
+				ThreadExample threadExample=new ThreadExample();
+				Thread t1=new Thread(threadExample);
+				t1.start();
+			}
+		}
+	
+	
