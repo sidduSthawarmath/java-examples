@@ -1,0 +1,12 @@
+Application:
+	An application is a program which will perform the specific task. 
+	For example google chrome,MS word, Paint etc.
+
+Process:
+	Process is executable instance of the application. For example if double click MS word 
+	icon then it will start the process internally that starts the MS word. 
+		1.Each process will take separate memory address in computer.
+		2.Communication between the process(interprocess communication) takes more time
+		3.Context switching from one process to another is more expensive
+		
+Thread:
