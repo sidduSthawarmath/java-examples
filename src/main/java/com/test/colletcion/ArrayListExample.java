@@ -1,6 +1,7 @@
 package com.test.colletcion;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class ArrayListExample {
@@ -32,8 +33,22 @@ public class ArrayListExample {
 		System.out.println("\nAdd the elements from by object :\n" + numList);
 
 		// Replace the elements from by object
-		numList.set(3,"FIVE");
-		System.out.println("\nAdd the elements from by object :\n" + numList);
+		numList.set(3, "FIVE");
+		System.out.println("\n Replace the elements from by object :\n" + numList);
+
+		List tempList = Arrays.asList("FOUR", "FIVE", "SIX");
+
+		// retain  all
+		numList.retainAll(tempList);
+		System.out.println("\nReturn All All:\n" + numList);
+
+		// Remove all
+		numList.removeAll(tempList);
+		System.out.println("\nReturn All All:\n" + numList);
+
+		// Add add all
+		numList.addAll(tempList);
+		System.out.println("\nAdd All:\n" + numList);
 
 	}
 }
